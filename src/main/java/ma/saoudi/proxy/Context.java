@@ -3,9 +3,9 @@ package ma.saoudi.proxy;
 public class Context {
     private Service service;
 
-    public void compute(){
+    public void compute(int parameter){
         System.out.println("*****************");
-        double result = service.compute();
+        double result = service.compute(parameter);
         System.out.println("Result : "+result);
         System.out.println("-----------------");
     }

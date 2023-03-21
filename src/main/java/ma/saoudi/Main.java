@@ -11,7 +11,12 @@ public class Main {
         // via proxy
 //        context.setService(new Proxy());
         // SECURITY PROXY
-        context.setService(new SecurityProxy());
-        context.compute();
+//        context.setService(new SecurityProxy());
+        // Cache Proxy
+        context.setService(new CacheProxy());
+        context.compute(3);
+        context.compute(4);
+        context.compute(7);
+        context.compute(3);
     }
 }
