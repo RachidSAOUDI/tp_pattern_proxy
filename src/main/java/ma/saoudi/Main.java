@@ -13,10 +13,15 @@ public class Main {
         // SECURITY PROXY
 //        context.setService(new SecurityProxy());
         // Cache Proxy
-        context.setService(new CacheProxy());
-        context.compute(3);
-        context.compute(4);
-        context.compute(7);
-        context.compute(3);
+//        context.setService(new CacheProxy());
+//        context.compute(3);
+//        context.compute(4);
+//        context.compute(7);
+//        context.compute(3);
+//        context.compute(7);
+//        context.compute(7);
+        // Logging Proxy
+        context.setService(new LogginProxy());
+        context.compute(6);
     }
 }
