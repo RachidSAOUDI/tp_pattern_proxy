@@ -1,7 +1,10 @@
 package ma.saoudi.proxy;
 
 public class LogginProxy implements Service {
-    private ServiceImpl service=new ServiceImpl();
+    private Service service;
+    public LogginProxy(Service service) {
+        this.service = service;
+    }
     @Override
     public double compute(int parameter) {
         long t1=System.currentTimeMillis();

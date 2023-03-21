@@ -5,7 +5,10 @@ import java.util.Map;
 
 public class CacheProxy implements Service {
     private Map<Integer, Double> cache=new HashMap<>();
-    private ServiceImpl service=new ServiceImpl();
+    private Service service;
+    public CacheProxy(Service service) {
+        this.service = service;
+    }
     @Override
     public double compute(int parameter) {
         Double cacheValue=cache.get(parameter);
